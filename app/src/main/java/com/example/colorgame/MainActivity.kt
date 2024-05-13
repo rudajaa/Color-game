@@ -8,6 +8,8 @@ import android.graphics.drawable.shapes.RectShape
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +27,26 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+            // Логіка для кнопки "Правила"
+            findViewById<ImageButton>(R.id.rulesButton).setOnClickListener {
+                // Здійсніть перехід на сторінку з правилами
+                val intent = Intent(this, RulesActivity::class.java)
+                startActivity(intent)
+            }
+
+            // Логіка для кнопки "Рекорди"
+            findViewById<ImageButton>(R.id.scoresButton).setOnClickListener {
+                // Здійсніть перехід на сторінку з рекордами
+                val intent = Intent(this, ScoresActivity::class.java)
+                startActivity(intent)
+            }
+
+            // Логіка для кнопки "Звук"
+           // findViewById<ImageButton>(R.id.soundButton).setOnClickListener {
+                // Ваша логіка для увімкнення/вимкнення звуку
+          //  }
+
+
         //створення рамки
         // Отримати посилання на текстове поле
         val gameTitleTextView = findViewById<TextView>(R.id.gameTitle)
@@ -64,5 +86,8 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, GameActivity::class.java)
             startActivity(intent)
         }
+
+        val imageMonaLisa = findViewById<ImageView>(R.id.mona_lisa_image)
+        imageMonaLisa.visibility = View.VISIBLE
     }
 }

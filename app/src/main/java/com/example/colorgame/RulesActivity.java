@@ -8,7 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class GameActivity extends AppCompatActivity {
+public class RulesActivity extends AppCompatActivity {
 
 
     @Override
@@ -25,7 +25,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Повертаємося на головний екран
-                Intent intent = new Intent(GameActivity.this, MainActivity.class);
+                Intent intent = new Intent(RulesActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
